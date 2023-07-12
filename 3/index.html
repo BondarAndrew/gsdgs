@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name-input">
+    <span id="name-output"></span>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var nameInput = document.getElementById('name-input');
+          var nameOutput = document.getElementById('name-output');
+    
+          nameInput.addEventListener('input', function() {
+            var inputValue = nameInput.value.trim(); // Отримати значення інпута та видалити зайві пробіли
+    
+            if (inputValue === '') {
+              nameOutput.textContent = 'незнайомець'; // Встановити текст "незнайомець", якщо інпут порожній
+            } else {
+              nameOutput.textContent = inputValue; // Встановити поточне значення інпута в спан
+            }
+          });
+        });
+      </script>
+</body>
+</html>
